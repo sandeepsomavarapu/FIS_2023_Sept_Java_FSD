@@ -1,0 +1,151 @@
+
+
+
+Language:-
+===========
+
+		communication human
+ english-->26
+
+Programming Language:
+======================== 
+		communication with machine
+		
+		program/instructions--->PL
+		
+java,c++,python,.net,c
+Functions						objects
+	POP							OOP
+B,C,BCPL,COBOL,PHOTON..		java,c++,python,.net
+
+			1)PERFORMANCE	INHERITANCE,POLYMORPHISAM
+			2)SECURITY		ABSTRACTION,ENCAPSULATION
+	
+			OOPS FEATURES
+	
+			PYTHON IS OOPL
+	
+	why python		1993	1.x
+							3.x
+	guido van russam
+	
+	1)simple
+	
+	
+	
+		welcome to java
+	53 	
+	Welcome.java
+	
+	class Welcome
+	{
+	public static void main(String args[])
+	{
+	System.out.println("welcome to java");
+	}
+	}
+	
+	33 keywords
+	
+	
+	1)functional programming features C
+	2) OOP features  c++
+	3) scripting language features from perl,shell script
+	4)modula programming from modula-3
+	
+	
+		the complete monty python circus
+
+		
+		Applications
+		
+		1)dekstop/standalone ex:notepadd++,antivirus,media players,...etc corepython,tkinter
+		2)web applications	 ex:gmail,fb,insta,amazon....URL    django,flask
+		3)db applications     pdbc
+		4)network programming
+		5)gaming
+		6)Data scince
+		7)IOT
+		8)AI
+		9)ML
+		
+		we can't develop mobile applications
+		
+	Features	
+		1)simple
+		2)open source  & free source 	ex: jython,cpython,rubypython,ironpython
+		
+Identifiers:
+============		
+		python dynamic typed programming language
+		
+		
+		int a=123;//java static typed PL
+		
+			b=234; //dynamic typed PL
+			
+		
+		a-z
+		A-z
+		0-9
+		_
+		
+	 import keyword
+>>> keyword.kwlist
+['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 
+'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 
+'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal',
+ 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']	
+		
+		
+		
+Datatypes:
+==========
+	 varname=vlaue;
+	
+	int
+	float
+	complex
+	bool
+	str
+	range
+	
+	list
+	set
+	tuple
+	frozenset
+	dict
+	None
+		
+		
+		
+	type()
+	id()
+	print()
+		
+		
+		
+		
+		
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
