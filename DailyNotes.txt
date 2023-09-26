@@ -23,7 +23,7 @@ B,C,BCPL,COBOL,PHOTON..		java,c++,python,.net
 	
 			OOPS FEATURES
 	
-			PYTHON IS OOPL
+			PYTHON IS OOPL	-->PI
 	
 	why python		1993	1.x
 							3.x
@@ -148,7 +148,7 @@ group of values as single entity
 	2)duplicates are allowed
 	3)both homogeneous and haterogeneous data is allowed
 	4)growable in nature or not fixed in size
-	5)[]
+	5)[] square brackets
 	6)list muttable
 
 muttable/imuttable
@@ -161,7 +161,7 @@ group of values as single entity
 	1)insertion order is preserved 
 	2)duplicates are allowed
 	3)both homogeneous and haterogeneous data is allowed
-	4)()
+	4)() parentheses
 	5)tuple imuttable
 
 SET:
@@ -300,11 +300,121 @@ SyntaxError: ':' expected after dictionary key
 
 
 
+input():dynamic 
+
+
+
+You're trying to use k (which is a list) as a key for d. 
+Lists are mutable and can't be used as dict keys
+
+
+.java
+python 
+
+	.py
+
+
+flow control statement
+
+if,else,elif,for,while
+
+
+Functions:
+============
+
+		
+
+
+		a =12;
+		b=13;
+	result=a+b
+
+
+		a1=100;
+		b1=200;
+	result1=a1+b1;	
+
+
+def addOfTwo(a,b):
+	result=a+b
+
+
+	addOfTwo(12,13)
+	addOfTwo(100,200)
+
+Task1:
+=======
+function and input 
+
+username 
+password 
+
+
+
+	uname  fisglobal
+	pass   fis@123
+
+
+		login success
+		
+	enter valid credetials
+
+
+OOPS:
+=====
+	class:collection of data members and member functions  class 
+	object :an instance of class 
+
+		obj=Employee()
+
+instance and static
 
 
 
 
 
+local variables
+global variables ---> instance and static 
+
+
+
+instance variable:
+====================
+
+class Employee:
+	empId=123;
+	orgName="fis global"		static
+
+	emp1=Employee(111);
+	emp2=Employee(112);
+
+where we can instance variable
+	1)inside the constructor by using self
+	2)inside the instance  by using self
+	3)outside the class by using obj reference 
+
+Static Variables(class variables):
+=================
+	not varied from object to object 
+	outside the method and with in the class 
+
+1)inside constructor by using classname 
+2)inside instance method  by using classname 
+3)classname 
+
+
+methods:
+
+instance methods :self  objref
+class methods	:cls 	@classmethod
+static methods	:@staticmethod
+
+
+
+
+functions/methods
+
+exception handling
 
 
 
