@@ -1,0 +1,37 @@
+1. Add a new Department to the DEPT table, and add a Manager and two Clerks to the EMP table
+that will belong to the new department.
+
+2. Transfer one of the new clerks to a different department and transfer one of the previously existing
+clerks to your new department.
+
+3. Create a new table called JOBS with two fields, a SMALLINT called JOBNO and a 15 character text
+field called JOB.
+
+4. Fill your new JOBS table with null values for the JOBNO and the job values from the EMP table.
+There should be only one row with each job type (ie. no repeats).
+
+5. Give a unique job number to each job type.
+
+6. Create a new empty table called EMP1. This table should have the same elds as EMP but with an
+additional eld called JOBNO of type SMALLINT. (Note|also make EMPNO and DEPTNO type
+SMALLINT.)
+
+7. Fill your new EMP1 table with the data from EMP and JOBS.
+
+UPDATE :
+
+8. Update all employees commission to 500 ?
+
+9. Update employee comm to 500 whose comm IS NULL ?
+
+10. Update different employees comm with different values ?
+
+11. increment salaries to all the employees with 25% based thier salaries ?
+
+
+
+
+
+
+
+

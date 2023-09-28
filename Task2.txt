@@ -1,0 +1,15 @@
+1. Create table emp11 from table emp ?
+
+2. create table emp12 from emp and into the new table copy only the structure but do not copy data ?
+
+3. Increase size of ENAME field to 20 ?
+
+4. Rename column name sal to salary ?
+
+5. Drop hiredate column ?
+
+6. Delete all the records from table with out using truncate command?
+
+7. create table with five columns,then add two columns ?
+
+
