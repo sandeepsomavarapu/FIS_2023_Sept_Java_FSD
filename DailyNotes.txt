@@ -402,7 +402,7 @@ Static Variables(class variables):
 2)inside instance method  by using classname 
 3)classname 
 
-
+functions/methods
 methods:
 
 instance methods :self  objref
@@ -412,9 +412,233 @@ static methods	:@staticmethod
 
 
 
-functions/methods
+
+
+OOPS:
+-----
+Inheritance:
+------------
+	CODE REUSABILITY
+	
+	
+	class A:
+		
+		
+		200 methods
+	
+	
+	class B(A):
+	
+		20 methods
+
+MI supported by python
+
+
+abstraction:
 
 exception handling
+
+files 
+
+numpy,pandas,rest api access
+
+case study
+
+
+method 
+
+abstract method :method with out body
+
+
+concrete method :method with body/implementation
+
+
+
+ENCAPSULATION:
+wrapping data and corresponding methods together
+
+
+Exception Handling :
+
+1.system defined error message 
+2.abnormal termination	
+
+class A:
+1
+2 .....error -->stop-->abnormal termination-->system defined error 
+
+
+try-->error code ,except--->handling code,finally--->clean up code,raise -->to throw an exception explicitly
+
+
+1.user friendly  error message 
+2.normal termination	
+
+user defined exception
+
+	1)class A(Exception)
+	2)param constructor
+
+
+
+py--->file -->write and read and append
+
+
+pickling 
+unpickling
+
+python object 
+
+write
+read
+
+
+Multi Threading:
+=================
+
+
+Multi Tasking:
+=============
+	executing multiple tasks simultaneously -->
+			
+Process based multi tasking
+executing multiple tasks simultaneously where each task is seperate independent process							
+						ex:laptop with teams,notepad,vscode,eclipse...
+Thread based multi tasking(multi threading)
+executing multiple tasks simultaneously where each and every task is belongs to same process							
+						ex:laptop with teams -->mic,video,screen,chat....
+
+			process is collection of threads
+			thread is a smallest unit of process
+
+
+
+
+class A:
+1
+2 2 hours
+3
+
+
+
+
+
+
+
+10000
+
+
+
+3 ways
+1)creating a thread without using any class
+2)creating a thread by extending Thread class
+3)creating a thread with out extending Thread class
+
+
+
+mainThread
+
+
+start
+
+Webservices:
+============
+		
+
+REST API
+
+
+SQL:
+
+DATA:
+======
+	eid ename salary email username..........
+
+
+	files  -->small amount of data 
+
+	databases -->its container oracle,mysql,db2,postgres,mongodb(nosql).....
+
+
+	data --->organise
+	
+
+	java --->database
+	python--->database 
+
+MYSQL--->SQL
+
+
+querys
+
+	DDL,DML,DRL
+
+RDBMS--->tables-->rows and columns
+
+
+
+table 	column/properties
+		eid  ename  esal	eadd
+		123	   x    100		hyd		rows/records/data
+		124	   y    450		hyd
+		129	   z    785		hyd
+		127	   a    198		hyd
+		125	   b    777		hyd
+
+MYSQL	
+
+	client 		workbench(GUI)
+
+DDL:-->create,alter,drop,truncate,rename
+
+DML:-->insert,uppdate,delete
+
+DRL:-->select
+
+
+
+create database fisglobal;
+use fisglobal;
+create table fis_emps(empid int,empname varchar(12),esal float,eadd varchar(15));
+describe fis_emps;
+alter table fis_emps add empdesg varchar(10);
+alter table fis_emps drop eadd;
+alter table fis_emps change empid empno int;#to rename column name 
+alter table fis_emps modify empno varchar(10);#to modify data type of a column
+alter table fis_emps rename to emps;
+describe emps;
+truncate table emps;#will make table as empty(records)
+drop table emps;#will delete the table
+
+#DML
+describe fis_emps;
+insert into fis_emps values(111,'suresh',9000,'hyderabad');
+insert into fis_emps values(121,'naresh',45000,'delhi');
+insert into fis_emps values(131,'rajesh',18000,'banglore');
+insert into fis_emps values(141,'mahesh',7500,'hyderabad');
+insert into fis_emps values(151,'somesh',12500,'banglore');
+select * from fis_emps;
+select empname from fis_emps;
+select empid,empname,esal from fis_emps;
+select * from fis_emps where esal between 5000 and 15000;
+insert into fis_emps(empid,empname,esal) values(222,'nihasvi',32000);
+update fis_emps set esal=esal+3000;
+update fis_emps set esal=esal+1000 where eadd='hyderabad';
+SET SQL_SAFE_UPDATES = 0;
+alter table fis_emps add column edesg varchar(10);
+insert into fis_emps(edesg) values('developer');
+update fis_emps set edesg='developer' where eadd='hyderabad';
+
+
+
+
+
+
+
+
+
+
+
 
 
 
