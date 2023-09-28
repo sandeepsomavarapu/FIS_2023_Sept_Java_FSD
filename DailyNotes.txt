@@ -618,6 +618,7 @@ insert into fis_emps values(131,'rajesh',18000,'banglore');
 insert into fis_emps values(141,'mahesh',7500,'hyderabad');
 insert into fis_emps values(151,'somesh',12500,'banglore');
 select * from fis_emps;
+alter table fis_Emps drop column edesg;
 select empname from fis_emps;
 select empid,empname,esal from fis_emps;
 select * from fis_emps where esal between 5000 and 15000;
@@ -628,6 +629,25 @@ SET SQL_SAFE_UPDATES = 0;
 alter table fis_emps add column edesg varchar(10);
 insert into fis_emps(edesg) values('developer');
 update fis_emps set edesg='developer' where eadd='hyderabad';
+delete from fis_Emps where eadd='hyderabad';
+truncate table fis_emps;
+select max(esal) from fis_emps;
+select min(esal) from fis_emps;
+select avg(esal) from fis_emps;
+select sum(esal) from fis_emps;
+select count(empname) from fis_emps;
+select max(esal) from fis_emps where esal<(select max(esal) from fis_emps);
+select * from fis_emps limit 3;
+select * from fis_emps where empname like "s%";
+select * from fis_emps where eadd like "%bad";
+select * from fis_emps where empname in('suresh','somesh','sandeep');
+select upper(empname) from fis_emps;
+select lower(empname) from fis_emps;
+select length(eadd) from fis_emps;
+select * from fis_emps order by empname  like 's%' asc;
+select * from fis_emps order by empname desc;
+select * from fis_emps where eadd='hyderabad' limit 1;
+select * from fis_emps where eadd='hyderabad' and esal<10000 limit 1 ;
 
 
 
