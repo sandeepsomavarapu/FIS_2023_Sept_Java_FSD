@@ -649,96 +649,139 @@ select * from fis_emps order by empname desc;
 select * from fis_emps where eadd='hyderabad' limit 1;
 select * from fis_emps where eadd='hyderabad' and esal<10000 limit 1 ;
 
+# Display `ename of department deptno earned commission $' for each salesman in reverse salary order
 
-CREATE TABLE dept (
-  deptno int,
-  dname  VARCHAR(14),
-  loc    VARCHAR(13)
-  );
-INSERT INTO dept VALUES(10, 'ACCOUNTING', 'NEW YORK');
-INSERT INTO dept VALUES(20, 'RESEARCH', 'DALLAS');
-INSERT INTO dept VALUES(30, 'SALES', 'CHICAGO');
-INSERT INTO dept VALUES(40, 'OPERATIONS', 'BOSTON');
+#constraints
+select * from emp1;
+create table emp1(eid int,ename varchar(10),esal int,eadd varchar(15));
+insert into emp1 values(123,'suresh',89000,'hyderabad');
+insert into emp1(ename) values('sandeep');
+insert into emp1(esal) values(-5000);
+insert into emp1(eid,esal) values(111,23000);
+#notnull,unique,primary key,check,foreign key
+create table emp2(eid int,ename varchar(10) not null,esal int,eadd varchar(15));
+insert into emp2 values(123,'suresh',89000,'hyderabad');
+select * from emp3;
+insert into emp2(eid,esal,eadd) values(111,23000,'hyd');
+create table emp3(eid int unique,ename varchar(10) not null,esal int,eadd varchar(15));
+insert into emp3 values(123,'suresh',89000,'hyderabad');
+insert into emp3(ename,esal,eadd) values('suresh',89000,'hyderabad');
+#primary key=nn+unique
+create table emp4(eid int primary key,ename varchar(10) not null,esal int,eadd varchar(15));
+insert into emp4 values(123,'suresh',89000,'hyderabad');
+insert into emp4(ename,esal,eadd) values('suresh',89000,'hyderabad');
+select * from emp4;
+#Check 
+create table emp5(eid int primary key,ename varchar(10)not null,esal int,eadd varchar(15),check(length(ename)>5));
+insert into emp5 values(121,'mahesh',89000,'banglore');
+insert into emp5 values(122,'hi',89000,'banglore');
 
-CREATE TABLE emp (
-  empno    int,
-  ename    VARCHAR(10),
-  job      VARCHAR(9),
-  mgr      int,
-  hiredate DATE,
-  sal      int,
-  comm     int,
-  deptno   int
+drop table dept;
+drop table emp;
+CREATE TABLE dept(
+    deptno INT,
+    dname VARCHAR(14),
+    loc VARCHAR(13),
+	constraint pk_dept primary key (deptno)
 );
 
+INSERT INTO dept(deptno, dname, loc) VALUES
+(10, 'ACCOUNTING', 'NEW YORK'),
+(20, 'RESEARCH', 'DALLAS'),
+(30, 'SALES', 'CHICAGO'),
+(40, 'OPERATIONS', 'BOSTON');
 
-INSERT INTO emp VALUES(
- 7839, 'KING', 'PRESIDENT', null,
-'1981-02-17',
- 5000, null, 10 );
-INSERT INTO emp VALUES(
- 7698, 'BLAKE', 'MANAGER', 7839,
- '1981-01-05',
- 2850, null, 30);
+CREATE TABLE emp(
+    empno INT,
+    ename VARCHAR(10),
+    job VARCHAR(9),
+    mgr INT,
+    hiredate DATE,
+    sal DECIMAL(7,2),
+    comm DECIMAL(7,2),
+    deptno INT,
+   constraint pk_emp primary key (empno),
+   constraint fk_deptno foreign key (deptno) references dept (deptno) 
+);
+INSERT INTO emp VALUES
+(7839, 'KING', 'PRESIDENT', null, '1981-11-17', 5000, null, 10),
+(7698, 'BLAKE', 'MANAGER', 7839,'1981-05-01', 2850, null, 30),
+(7782, 'CLARK', 'MANAGER', 7839, '1981-06-09', 2450, null, 10),
+(7566, 'JONES', 'MANAGER', 7839, '1981-04-02',2975, null, 20),
+(7788, 'SCOTT', 'ANALYST', 7566, '1981-04-19',3000, null, 20),
+(7902, 'FORD', 'ANALYST', 7566, '1981-03-12', 3000, null, 20),
+(7369, 'SMITH', 'CLERK', 7902,'1980-12-17', 800, null, 20),
+(7499, 'ALLEN', 'SALESMAN', 7698,'1981-02-20', 1600, 300, 30),
+(7521, 'WARD', 'SALESMAN', 7698, '1981-02-22',1250, 500, 30),
+(7654, 'MARTIN', 'SALESMAN', 7698,'1981-09-28',1250, 1400, 30),
+(7844, 'TURNER', 'SALESMAN', 7698,'1981-09-08',1500, 0, 30),
+(7876, 'ADAMS', 'CLERK', 7788, '1987-05-23',1100, null, 20),
+(7900, 'JAMES', 'CLERK', 7698,'1981-03-12',950, null, 30),
+(7934, 'MILLER', 'CLERK', 7782,'1982-01-23',1300, null, 10);
 
-INSERT INTO emp VALUES(
- 7782, 'CLARK', 'MANAGER', 7839,
- '1981-06-09',
- 2450, null, 10);
+select * from emp;
+select * from dept;
+delete from dept where deptno=10;
 
-INSERT INTO emp VALUES(
- 7566, 'JONES', 'MANAGER', 7839,
- '1981-04-02',
- 2975, null, 20);
 
-INSERT INTO emp VALUES(
- 7788, 'SCOTT', 'ANALYST', 7566,
- '1987-02-07',
- 3000, null, 20);
 
-INSERT INTO emp VALUES(
- 7902, 'FORD', 'ANALYST', 7566,
-'1981-03-12',
- 3000, null, 20 );
 
-INSERT INTO emp VALUES(
- 7369, 'SMITH', 'CLERK', 7902,
-'1980-12-17',
- 800, null, 20 );
 
-INSERT INTO emp VALUES(
- 7499, 'ALLEN', 'SALESMAN', 7698,
- '1981-2-20',
- 1600, 300, 30);
 
-INSERT INTO emp VALUES(
- 7521, 'WARD', 'SALESMAN', 7698,
-'1981-2-22',
- 1250, 500, 30 );
 
-INSERT INTO emp VALUES(
- 7654, 'MARTIN', 'SALESMAN', 7698,
- '1981-09-28',
- 1250, 1400, 30 );
 
-INSERT INTO emp VALUES(
- 7844, 'TURNER', 'SALESMAN', 7698,
- '1981-8-9',
- 1500, 0, 30);
 
-INSERT INTO emp VALUES(
- 7876, 'ADAMS', 'CLERK', 7788,
- '1987-07-21',
- 1100, null, 20 );
 
-INSERT INTO emp VALUES(
- 7900, 'JAMES', 'CLERK', 7698,'1981-12-03',
- 950, null, 30 );
 
-INSERT INTO emp VALUES(
- 7934, 'MILLER', 'CLERK', 7782,
-'1982-02-12',
- 1300, null, 10 );
+Foreign Key:
+============
+
+emp_dept_info
+eid    ename   esal    eadd       deptno    dname   dloc 
+
+1     	x		100		hyd		    10		sales	 india 
+2     	y		200		delhi		20		admin	 US
+3     	z		300		banglore	10		sales	 india 
+4     	a		250		hyd			30		training UK 
+5     	b		540		noida		20		admin	 US 
+6     	c		320		pune		30		training UK 
+
+
+
+
+
+
+
+10 -->sales--->100000
+20--->admin--->50000
+30--->training--->70000
+
+
+emp
+									FK
+eid    ename   esal    eadd       deptno   
+
+1     	x		100		hyd		    10		
+2     	y		200		delhi		20		
+3     	z		300		banglore	10		
+4     	a		250		hyd			30		
+5     	b		540		noida		20		
+6     	c		320		pune		30		
+
+
+dept PK
+     deptno    dname   dloc 
+
+    10		sales	 india 
+	20		admin	 US
+	30		training UK 
+
+foreign key
+
+
+
+
+
 
 
 
