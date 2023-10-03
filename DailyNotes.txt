@@ -722,8 +722,73 @@ INSERT INTO emp VALUES
 select * from emp;
 select * from dept;
 delete from dept where deptno=10;
+drop table emp;
+drop table  dept;
+select empno,ename,job from emp;
+select * from dept;
+select * from emp;
+insert into emp(empno,ename,job) values(123,'sleeping','developer');
+select e.empno,e.ename,job,dname,d.deptno from emp e,dept d;#Cross Join all possible records 
+select e.empno,e.ename,job,dname,d.deptno from emp e,dept d where e.deptno=d.deptno ;#Inner Join will fetch only matching records
 
+select e.empno,e.ename,job,dname,d.deptno from emp e left outer join dept d on e.deptno=d.deptno;#left outer Join will fetch all the  records from left side table and right sinde only matching records
 
+select e.empno,e.ename,job,dname,d.deptno from emp e right outer join dept d on e.deptno=d.deptno;#left outer Join will fetch all the  records from left side table and right sinde only matching records
+
+select e.empno,e.ename,job,dname,d.deptno from emp e  join dept d on e.deptno=d.deptno;#left outer Join will fetch all the  records from left side table and right sinde only matching records
+select e.empno,e.ename,job,dname,d.deptno from emp e left outer join dept d on e.deptno=d.deptno
+union
+select e.empno,e.ename,job,dname,d.deptno from emp e right outer join dept d on e.deptno=d.deptno;
+
+select e.empno,e.ename,job,dname,d.deptno from emp e left outer join dept d on e.deptno=d.deptno
+union all
+select e.empno,e.ename,job,dname,d.deptno from emp e right outer join dept d on e.deptno=d.deptno;
+
+SELECT COALESCE(null,null,'sandeep',null,'mahesh') from dual;
+
+select deptno,sum(sal) from emp group by deptno;
+
+select deptno,min(sal) from emp group by deptno;
+
+select deptno,max(sal) from emp group by deptno;
+
+SELECT ename, sal + comm AS total
+FROM Emp
+ORDER BY total DESC;
+select * from emp e  order by deptno , sal desc;
+SELECT SAL FROM EMP WHERE EMPNO=7499;
+#single row subquery
+SELECT * FROM EMP WHERE SAL!=(SELECT SAL FROM EMP WHERE EMPNO=7499);
+SELECT * FROM EMP WHERE SAL>(SELECT SAL FROM EMP WHERE EMPNO=1111);
+SELECT * FROM EMP WHERE SAL<(SELECT SAL FROM EMP WHERE EMPNO=7499);
+SELECT * FROM EMP WHERE SAL>(SELECT avg(SAL) FROM EMP );
+#multi row subquery
+
+SELECT * FROM emp   
+WHERE sal > ANY (SELECT sal FROM emp WHERE sal BETWEEN 2500 AND 4000);
+
+SELECT * FROM emp   
+WHERE sal > ANY (SELECT sal FROM emp WHERE sal BETWEEN 2500 AND 4000 )order by sal desc;
+
+SELECT * FROM emp   
+WHERE sal > All (SELECT sal FROM emp WHERE sal BETWEEN 2500 AND 4000);
+
+SELECT * FROM emp   
+WHERE sal IN (SELECT sal FROM emp WHERE sal BETWEEN 2500 AND 4000);
+SELECT * FROM emp   
+WHERE sal not IN (SELECT sal FROM emp WHERE sal BETWEEN 2500 AND 4000);
+
+SELECT D.* FROM DEPT D WHERE EXISTS(SELECT E.EMPNO FROM EMP E WHERE  E.DEPTNO=D.DEPTNO);
+SELECT D.* FROM DEPT D WHERE not EXISTS(SELECT E.EMPNO FROM EMP E WHERE  E.DEPTNO=D.DEPTNO);
+select * from emp;
+select * from dept;
+
+SELECT * FROM emp WHERE sal =
+ ( SELECT max(sal) FROM emp WHERE sal < 
+ ( SELECT max(sal) FROM EMP));
+SELECT empno, ename, sal, (SELECT max(sal) FROM emp) maxsal FROM emp; 
+SELECT ename, sal FROM (SELECT * FROM emp e ORDER BY e.sal) as ex; 	
+SELECT empno, ename, sal, deptno FROM emp WHERE deptno IN(SELECT deptno FROM dept WHERE loc='CHICAGO'); 
 
 
 
@@ -778,26 +843,80 @@ dept PK
 
 foreign key
 
+Joins:
+======
 
 
 
+Constraints:
+============
+1. create table without constraints and add constraints ?
+
+2. create table with foreign key constraint ?
+
+3. Add constraint with out name in alter level ?
+
+4. Add composite primary key on two attributes ?
+
+5. Add foreign key constraint with out name in alter level ? 
+
+Joins :
+==========
+
+1. Display the name of each employee with his department name.
+
+2. Display a list of all departments with the employees in each department.
+
+3. Display all the departments with the manager for that department.
+
+4. Display the names of each employee with the name of his/her boss.
+
+5. Display the names of each employee with the name of his/her boss with a blank for the boss of the
+president.
+
+6. Display the employee number and name of each employee who manages other employees with the
+number of people he or she manages.
+
+Answer:
+=======
+SELECT m.empno, m.ename, count(*) as noofemp
+FROM Emp e  join Emp m on (m.empno = e.mgr)
+GROUP BY m.empno,m.ename
+
+7. Repeat the display for the last question, but this time display the rows in descending order of the
+number of employees managed.
 
 
 
+Sub Querys:
+============
+
+a select query in side another select query 
+
+	select columns from emp where ename='';
+
+	suquery
+
+		SELECT CLAUSE
+		FROM CLAUSE
+		WHERE CLAUSE
+
+	>,<,=
+
+IN,ANY,ALL,SOME
+
+SELECT (SELECT):SCALAR
+
+		7499  
+						
+SELECT * FROM EMP WHERE SAL>(SELECT SAL FROM EMP WHERE EMPNO=7499)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+										2850.00
+										2975.00
+										3000.00
+										3000.00
 
 
 
