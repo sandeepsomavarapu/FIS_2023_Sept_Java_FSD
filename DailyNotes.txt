@@ -918,6 +918,324 @@ SELECT * FROM EMP WHERE SAL>(SELECT SAL FROM EMP WHERE EMPNO=7499)
 										3000.00
 										3000.00
 
+index 
+sal				
+
+21				2
+11				3	
+29				3
+2				11
+112				11
+312				21
+11				22	
+22				29	
+65				65
+3				66
+343				112
+66				312	
+3				343
+
+
+select * from emp where sal=3 
+
+
+
+
+pivot
+	it spilts the unique values from one column into many columns
+
+
+OLTP  VS  OLAP
+
+
+OLAP
+online analytical processing  :data analysis spotify
+
+OLTP
+online transactional processing 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  CREATE TABLE employee
+  (
+      id INT PRIMARY KEY,
+      name VARCHAR(50) NOT NULL,
+      gender VARCHAR(50) NOT NULL,
+      salary INT NOT NULL,
+      department VARCHAR(50) NOT NULL
+   )
+   
+   
+    INSERT INTO employee
+  VALUES
+  (1, 'David', 'Male', 5000, 'Sales'),
+  (2, 'Jim', 'Female', 6000, 'HR'),
+  (3, 'Kate', 'Female', 7500, 'IT'),
+  (4, 'Will', 'Male', 6500, 'Marketing'),
+  (5, 'Shane', 'Female', 5500, 'Finance'),
+  (6, 'Shed', 'Male', 8000, 'Sales'),
+  (7, 'Vik', 'Male', 7200, 'HR'),
+  (8, 'Vince', 'Female', 6600, 'IT'),
+  (9, 'Jane', 'Female', 5400, 'Marketing'),
+  (10, 'Laura', 'Female', 6300, 'Finance'),
+  (11, 'Mac', 'Male', 5700, 'Sales'),
+  (12, 'Pat', 'Male', 7000, 'HR'),
+  (13, 'Julie', 'Female', 7100, 'IT'),
+  (14, 'Elice', 'Female', 6800,'Marketing'),
+  (15, 'Wayne', 'Male', 5000, 'Finance')
+
+
+
+  SELECT department, sum(salary) as Salary_Sum
+  FROM employee
+  GROUP BY department
+  
+  
+   SELECT coalesce (department, 'All Departments') AS Department,
+  sum(salary) as Salary_Sum
+  FROM employee
+  GROUP BY ROLLUP (department)
+
+  SELECT
+  coalesce (department, 'All Departments') AS Department,
+  coalesce (gender,'All Genders') AS Gender,
+  sum(salary) as Salary_Sum
+  FROM employee
+  GROUP BY ROLLUP (department, gender)
+  
+  
+  
+  
+  
+  
+  
+https://www.databasestar.com/hierarchical-data-sql/
+
+
+https://www.geeksforgeeks.org/difference-between-star-schema-and-snowflake-schema/
+
+  
+  FrontEnd:
+  ============
+  
+  HTML:
+  
+  Website:webpages 
+			
+				1)static webpages		 fixed 		fb  loginpage
+				2)dynamic webpages		not fixed 		homepage
+  
+  
+  
+  HTML:hyper text markup lang
+  
+  <>  </>
+  tim berners lee 1990
+  
+  1996 w3c
+  
+  ISO 2000
+  
+  html5
+  
+  
+  welcome.html-->predefined 
+  
+  browser -->engine 
+  
+  google-->v8 
+  mozilla-->spider monkey
+  IE--->chakra 
+  
+  DOM
+
+  
+  table,tr,td,thead,th,tbody
+  ordered unordered 
+  Form Tags
+  
+  
+  CSS:
+  ====
+	cascading style sheet
+	
+ we can apply styles to html content
+	
+		3 ways
+		
+		1)inline	with in the opening tag style attribute 
+		2)internal	head tag <style>selector{propname:value;propname:value......}</style>
+		3)external		link
+	
+  
+  
+  style="propname :provalue;proname:propvalue"
+  
+  
+  five selectors
+	
+		1)element selector		element name {properties}
+		2)group selector		more then one element names
+		3)all selector			*
+		4)id selector			#idname
+		5)class selector 		.classname
+  
+  Bootstrap 
+  free source and  open source
+  
+  angular=>TS+HTML+CSS+SPEC
+  
+			link bs
+  
+  CDN
+  html-->bs classes bs link
+  
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+	https://cdnjs.com/libraries/font-awesome
+  
+RWD
+  
+  
+  JS:
+  ===
+  
+  Scrpting language 
+  
+  
+  dynamic web pages 
+  front end validations onsubmit,onclick,ondblclick
+  change html content
+  style html content
+  
+			JS 
+			inline
+			internal
+			external
+			
+		variables
+		datatypes
+		functions
+		flow control.....
+  
+  <head>
+  <script>
+		<internal>
+  </script>
+  </head>
+	<body>
+		<script>
+				inline
+		</script>
+  
+  </body>
+  
+  
+  .js  external
+  
+  
+  variable-->name of memory location
+  
+  
+	varname =value //dynamic typed 
+  
+  var/let/const
+  
+  var varname=value;
+  
+  var eid=123; number 
+  
+  
+  function addOfTwo(a,b)
+  {
+  
+	return a+b;
+  }
+  
+  document.write("welcome to javascript")
+  
+  console.log("welcome to browser console")
+  
+  alert()
+  
+  
+  
+  front end validations
+  
+  
+  
+  username 		
+  password 			
+  
+			submit
+  
+  
+	username=fisglobal
+	password=fisglobal@123
+	
+	
+	alert(login success)
+	
+	alert(enter valid credentials)
+  
+  JS
+  
+  <script src="externalJs.js" />
+  
+Typescript:
+===========
+ ts superset of js
+
+JS
+	
+		TS=JS+Types
+
+	JS -->Dynamic Typed Pl
+	TS-->static typed PL
+	
+			var varname=value
+			
+			var varname:number=123;
+		
+		js-->browser 
+		
+		ts -->js
+		
+		tsc
+		
+		node 
+		npm install -g typescript
+		
+		
+Angular:
+========
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
