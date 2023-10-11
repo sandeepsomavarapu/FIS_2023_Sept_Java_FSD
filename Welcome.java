@@ -1,8 +1,14 @@
-class Welcome_123
+class Welcome
 {
 public static void main(String args[])
 {
-	System.out.println("welcome to java");
+	byte age=30;	//local variables
+	char gender='M';
+	float salary=3.32462863994442f;
+	double result=23.32462863994442;
+	boolean value=true;
+	
+	System.out.println(salary+" welcome to java :"+result+" "+age);
 }
 }
 
