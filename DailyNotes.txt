@@ -1222,6 +1222,254 @@ Angular:
 ========
 
 
+angular js  2010 google js framework MVC controllers
+
+
+angular 2.0 2016 TS-->tsc --->js component
+
+
+	component-->its building block of angular app
+
+
+
+		youtube
+
+
+angular-->ts+html+css+js
+
+node 
+npm
+
+npm install -g @angular/cli
+
+
+MPA
+SPA 
+
+
+angular cli--->commands
+
+@Component{
+selector:"anything";
+templateURL:html
+stylesurls:.css
+}
+export class Employee
+ {
+ 
+ 
+ }
+			header
+			footer
+			sidebars 
+			body
+
+
+	ng new demo_app
+	
+		root component -->app-->html,ts,css,spec.ts
+
+
+
+	login
+	logout
+	register 
+
+		ng serve -o
+		
+		4200
+
+<router-outlet></router-outlet>
+
+@Component({
+  selector: 'fis',
+  template: `
+  <h2>welcome to india</h2>
+  `,
+  styles:["h2{background-color:yellow}"]
+
+})
+
+ng new projectname
+
+ng serve -o
+
+		4200
+		
+app.module.ts-->configuration 
+
+ts
+html
+css
+spec.ts
+
+app.module.ts
+app-routing.ts
+Component Creation
+
+
+	ng generate component login
+
+	ng g c login
+	
+		login.component.ts
+		login.component.htmls
+		login.component.css
+		login.component.spec.ts
+
+
+	ng g c register --skip-tests true
+
+
+
+directives 
+
+	ngFor ,ngIf,ngSwitch
+
+Pipes:transform the data
+
+	predefined pipes
+	user defined pipes
+	
+	
+	
+		|pipename
+	
+	
+	
+	custom pipe--->
+	
+	ng g c x
+	
+	ng g p gender --skip-tests true
+	
+		
+	export 	class implements Pipetransform
+		
+		transform()
+		{
+		
+		
+		}
+		
+event binding,property binding ,two way data binding  [()]
+auth guards
+@input @output event emitter
+		Services -->JSON
+		forms
+
+Angular Forms:
+==============
+
+		Template driven forms 
+		model driven forms (Reactive forms)
+		
+		
+			username fisglobal
+				password fis123
+
+		Dependency Injection
+
+
+
+
+auth guards
+
+
+	canactivate 
+	
+	
+	ng g g auth-guard --skip-tests true
+
+
+
+Service--injectable class-->common
+
+	a b c d e
+				4200				JSON-server			JAVA
+ng g s servicename @Injectable    -->server(java ,python,angular......)
+
+			JSON-->javascript object notation
+
+		HttpClient-->crud
+		
+			post,get,update,delete
+
+
+
+Java:
+=======
+
+Programming Language:communication with machine 
+
+Language:communication
+
+
+		POP 						OOP
+B,BCPL,C,COBOL,PHOTON....		JAVA,PYTHON,C++,.NET,LISP.......
+
+					1)performance	inheritance,polymorphisam
+					2)security		encapsulation,abstraction
+						
+
+JAVA	1995 JDK 1.0 james gosling -->sun micro system---oracle corporation
+
+			 jdk 21
+
+simple
+object oriented
+portable
+PI
+Secured
+Robust
+AN
+Interprted 
+high performance
+multithreaded 
+distributed 
+dynamic
+
+
+welcome.java
+
+				machine 
+				windows
+				
+	machine2		machine3		machine4
+	linux			ubuntu				mac
+	shruthi			meghashayam			amit
+
+
+WORA
+
+	
+PI
+	
+	
+	java
+
+	
+ 53 -->lowercase 
+
+
+Identifiers
+
+a name in java classname,var name,method name,obj name interface.....
+
+
+a-z
+A-Z
+0-9
+$
+_
+
+classname,interface -->every word first letter must be capital
+method name,variable name--->every word first letter must be capital except first word 
+constants-->all capital
+package name-->lowercase 
+
+
+Variables,eclipse
 
 
 
@@ -1241,3 +1489,9 @@ Angular:
 
 
 
+
+
+
+
+
+	
