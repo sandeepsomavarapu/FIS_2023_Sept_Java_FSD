@@ -1564,6 +1564,49 @@ Usage:
  }
 
 
+class PrintStream
+{
+public void println()
+	{
+	
+	}
+
+}
+
+class System java.lang
+{
+static	PrintStream out=new PrintStream();
+
+main()
+{
+	System.out.println("");
+
+}
+
+
+}
+
+
+JVM Architecture:
+=================
+
+local variables		where
+instance variables   where	
+static variables	where 
+
+		
+			execution
+		java classname .class 
+
+JVM		.class
+
+	3 parts
+	
+	CLSS -->loading .class 
+	
+	Memory Areas
+	
+	Execution Engine
 
 
 
@@ -1572,6 +1615,133 @@ Usage:
 
 
 
+OOPS:
+=====
+	inheritance
+	polymorphisam		performance
+	encapsulation
+	abstraction			security
 
 
+	
+	
+	Inheritance:
+	============
+	
+			CODE REUSABILITY
+			
+			extends,implements
+			
+			
+			Class A
+			{
+			100 variables
+			1000 methods
+			}
+	
+	class B extends A
+	{
+	
+	100 methods
+	}
+	
+	
+	
+	
+class Mobile_Calci {
+	public void mul(int a, int b) {
+		System.out.println("mul of two int's : " + (a * b));
+	}
+
+	public void div(int a, int b) {
+		System.out.println("div of two int's : " + (a / b));
+	}
+}
+
+class Caluculator extends Mobile_Calci {
+	public void add(int a, int b) {
+		System.out.println("add of two int's : " + (a + b));
+	}
+
+	public void sub(int a, int b) {
+		System.out.println("sub of two int's : " + (a - b));
+	}
+}
+
+public class Calci extends Mobile_Calci {
+	public static void main(String[] args) {
+		Calci obj = new Calci();
+//		obj.add(12, 13);
+//		obj.sub(12, 13);
+		obj.mul(2, 3);
+		obj.div(12, 3);
+	}
+
+}
+
+NOTE:
+	
+	By default package for every java file is  java.lang
+	By default parent for every java class is 	java.lang.Object
+	
+	
+	
+	
+	MI not supported by java through classes
+	MI  supported by java through interfaces
+	
+	
+	methods
+	
+	abstract method
+	concrete method/non-abstract method 
+	
+	
+	public void m1()
+	{
+	
+	
+	}//concrete method 
+	
+		//method with out implementation-->abstract method 
+	
+	
+	public abstract void m1(); abstraction 
+					abstract class	-->0-100%
+					interfaces 		-->100%
+	
+	
+	
+	
+	class				its collection of only concrete/implemented methods
+	abstract class		its combination of both concrete and abstract methods
+	interface 			will have only abstract methods
+	
+	
+	
+		
+	interface A 			interface B
+	{					{
+	
+	void m1();			void m1();
+		
+	
+	}					}
+	
+	
+	class C implements A,B
+	{
+	
+	C c =new C()
+	c.m1();//
+
+	m1()
+	{
+	
+	
+	}
+	}
+	
+	
+	
 	
