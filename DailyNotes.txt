@@ -1464,24 +1464,104 @@ $
 _
 
 classname,interface -->every word first letter must be capital
-method name,variable name--->every word first letter must be capital except first word 
+method name,s name--->every word first letter must be capital except first word 
 constants-->all capital
 package name-->lowercase 
 
 
-Variables,eclipse
+Variables,datatypes eclipse
+
+sandeep trainer 
+
+949499494
+
+
+
+			age=22
+syntax
+	 datatype variablename=value;
+	 
+	 
+	 
+	 PDT 				NPDT
+8 	 				String,array,....
+	 
+							long age=22; 8 bytes
+	byte	1 byte		-128 to 127
+	short	2 bytes		-32768 to 32767
+	int		4 bytes  	-2147483648 to 2147483647
+	long	8 bytes	  -2 power 63 to 2 power 63 -1
+
+	float	4 bytes			float marks=23.5456546456456454f 5 to 6 decimal 
+	double	8 bytes 				14 to 15 decimal places
+	
+	boolean	1 bit 			0-false,1-true
+	char 	2 bytes   'M'
+	
+
+		C-->ASCII
+
+		a 97,98
+
+		A- 65
+
+
+		Java-->Unicode 18 international
+
+	
+	
+	local variables-->inside the method
+	global variables	-->instance & static 
+	
+	
+	
+	package 
+	
+by default java.lang package is available for every java file  	
+	
+	Methods
+	variables
+	Scanner
+	
+	
+Instance & Static 
+
+
+
+syntax:
+		static properties need to declare by using static keyword
+		if there is no static keyword that is instance
+
+memory:
+		instance properties will get memory for every object creation    //memory
+		static properties will get memory ONLY ONCE at the time class loading into JVM
+			class	A
+	
+			classname objname=new classname()
+	
+			javac filename-->.class-->java classname-->jvm-->output
+
+Access:
+	
+		instance properties can be accessed by using obj reference 
+		
+		static properties cab be accessed by using classname 
+
+Usage:
+
+			common data to represent choose static like orgname,countryname,statename,.....
+			unique data empid,contact,pan,aadhar.....
+			
 
 
 
 
 
-
-
-
-
-
-
-
+ accessmodifier instance/static returntype methodname(parameters)
+ {
+ 
+	return ;
+ }
 
 
 
