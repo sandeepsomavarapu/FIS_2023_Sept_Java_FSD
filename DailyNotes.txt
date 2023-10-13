@@ -1718,7 +1718,7 @@ NOTE:
 	interface 			will have only abstract methods
 	
 	
-	
+				
 		
 	interface A 			interface B
 	{					{
@@ -1741,6 +1741,80 @@ NOTE:
 	
 	}
 	}
+	
+	by default interface methods public abstract
+	by default interface variables are public static final
+	
+	
+	
+	polymorphisam:
+	==============
+	many forms
+	
+	
+		method overloading/compile time /static binding
+			
+				method name is same signature is different 
+						
+									 no of params 
+									 order of params
+									 type of params
+					
+		
+		method overriding/runtime /dynamic 
+	
+	
+	Method Overriding:
+	=================
+	
+	method name is same implementation is different 
+	
+	
+	
+	
+	class Parents
+	{
+		properties()
+		{
+		System.out.println("1000 crores")
+		}
+		m1()
+		{
+		sop("m1")
+		}......
+	
+	}
+	
+	class Child extends Pasrents 
+	{
+		@Override
+		marriage()
+		{
+		sop("x")
+		}
+	
+	}
+	
+	final variable value is fixed 
+	final methods cannot used for overriding 
+	final classes cannot inherited
+	
+	
+	
+	this,super,public,private,protected,default,encpasulation
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
