@@ -1801,18 +1801,162 @@ NOTE:
 	
 	
 	
-	this,super,public,private,protected,default,encpasulation
+	constructor,this,super,final,public,private,protected,default,encpasulation,exception handling ,String,....
+	
+	
+	
+	constructor:
+	============
+		special function looks like method 
+	
+		constructor name must be classname 
+	
+	
+	
+	public void m1()
+	{
+	
+	}
+	
+	to intialise the object 
+	
+	
+	A
+	
+	A obj=new A()
+	
+	classname objname=new classname();
+	classname objname=new constructor();
 	
 	
 	
 	
+	this is used to represent current class properties(variable,method,object,constructor)
+	super is used to represent parent class properties(variable,method,constructor)
 	
 	
 	
 	
+	public			everywhere
+	private         class level
+	protected        inside the package everywhere and ourside the package only in the child classes
+	default			package level scope
+	
+	
+	Encapsulation:
+	==============
+	its process of wrapping the data and methods together 
+	
+	
+			class Employee
+			{
+				eid
+				ename
+				esal
+				email
+				desg.....private 
+			
+			//methods public  setters and getters 
+			
+			
+			
+			}
+	
+	Exception Handling:
+	==================
+	
+the process converting system defined error messages into user freindly error messages 
 	
 	
 	
+	1)system defined error messages
+	2)abnormal termination
+	
+	
+	1)user friendly error messages
+	2)normal termination
+	
+	
+	StringBuffer 		StringBuilder
+	
+	synchronized	not synchronized
+	
+	
+	public void m1()				t1,t2,t3,t4
+	{
+	
+	
+	}
+	
+	public synchronized void m2()  //t1
+	{
+	
+	
+	}
+	
+	
+arrays :
+=========	
+
+
+		int a=123;
+	
+	arrays	--group of values
+	
+			int array[]={12,32,43,22,65,77};
+			
+			int array1[]=new int[10];
+			
+			array[10]
+			index -->0
+			array[0]
+			
+			1)same type homogoeneous data 
+			
+			2)size is fixed 
+			
+			3)no utility methods
+			
+			
+Collections:
+===========			
+			
+			1)similar type data/ homogoeneous data  only allowed 
+			
+			2)array size is fixed /not growable in nature AIOE
+			
+			3)no utility methods	
+	
+Advantages with collections framework	
+			
+			1)both similar/disimilar  type homogoeneous/heterogeneous data   allowed 
+			
+			2)collections are not fixed in size / growable in nature AIOE
+			
+			3)lots of utility methods	
+				
+			
+			
+			AL-->10
+				 16
+				
+	
+	List:
+		1)duplicates are allowed
+		2)insertion order is preserved 
+	
+	Set:
+		1)duplicates are not allowed
+		2)insertion order is not preserved 
+	
+	
+	Queue:
+		1)prior to process FIFO
+			
+		MAP:
+		key,value
+		
+	java.util
 	
 	
 	
