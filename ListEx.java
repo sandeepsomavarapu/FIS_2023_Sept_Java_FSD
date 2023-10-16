@@ -11,11 +11,13 @@ package com.fis.collections;
 //2)insertion order is preserved 
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
 
 public class ListEx {
 	public static void main(String[] args) {
 
-		ArrayList<String> al = new ArrayList<String>();// 10,16 (cc*3/2)+1
+		LinkedList<String> al = new LinkedList<String>();// 10,16 (cc*3/2)+1
 		al.add("suresh");
 		al.add("sandeep");
 		al.add("naresh");
@@ -23,8 +25,36 @@ public class ListEx {
 		al.add("naresh");
 		al.add("satish");
 		al.add("kiran");
-
 		System.out.println(al);
+		al.add(2,"fis");
+		System.out.println(al);
+		
+		ArrayList<String> al1 = new ArrayList<String>();
+		al1.add("nihasvi");
+		al1.add("somesh");
+		al1.add("amit");
+		System.out.println(al1);
+		al1.addAll(al);
+		//al1.remove("amit");
+		System.out.println(al1.contains("few are started sleeping"));
+		System.out.println(al1.containsAll(al));
+		System.out.println(al1.isEmpty());
+		//al1.removeAll(al1);
+		//al1.retainAll(al);
+		//al1.clear();
+		System.out.println(al1);
+		
+		
+		Iterator<String> itr=al1.iterator();
+		
+		while(itr.hasNext())
+		{
+			System.out.println(itr.next());
+		}
+		
+		
+	
+		
 
 	}
 }

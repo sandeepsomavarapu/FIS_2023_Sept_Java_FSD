@@ -1,6 +1,9 @@
 package com.fis.collections;
 
-import java.util.TreeMap;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map.Entry;
+import java.util.Set;
 
 //1)both similar/disimilar  type homogoeneous/heterogeneous data   allowed 
 
@@ -16,8 +19,8 @@ import java.util.TreeMap;
 public class MapEx {
 	public static void main(String[] args) {
 
-		TreeMap<Integer, String> al = new TreeMap<Integer, String>();// 16
-		al.put(432, "suresh");//entry
+		HashMap<Integer, String> al = new HashMap<Integer, String>();// 16
+		al.put(432, "suresh");// entry
 		al.put(222, "sandeep");
 		al.put(121, "naresh");
 		al.put(900, "rajesh");
@@ -26,6 +29,41 @@ public class MapEx {
 		al.put(432, "kiran");
 
 		System.out.println(al);
+		
+		
+		Set<Entry<Integer,String>> entries=al.entrySet();
+		Iterator<Entry<Integer,String>> entry=entries.iterator();
+		
+		while(entry.hasNext())
+		{
+		Entry<Integer,String> keyValue=	entry.next();
+		//System.out.println(keyValue);
+		System.out.println(keyValue.getKey()+"  "+keyValue.getValue());
+		}		
+		
+
+//		Set<Integer> set = al.keySet();
+//
+//		Iterator<Integer> keys = set.iterator();
+//
+//		while (keys.hasNext()) {
+//			int key = keys.next();
+//			System.out.println(key + " " + al.get(key));
+//		}
+//		
+//		
+
+//		System.out.println(al.get(213));
+//		System.out.println(al.remove(789));
+//
+//		System.out.println(al.containsKey(111));
+//		System.out.println(al.containsValue("sandeep"));
+//		System.out.println(al);
+//		HashMap<Integer, String> al1 = new HashMap<Integer, String>();// 16
+//		al1.put(333, "fisglobal");
+//		al1.put(444, "fis");
+//		al1.putAll(al);
+//		System.out.println(al1);
 
 	}
 }

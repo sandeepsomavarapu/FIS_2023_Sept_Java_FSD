@@ -1,5 +1,6 @@
 package com.fis.collections;
 
+import java.util.Comparator;
 import java.util.TreeSet;
 
 //1)both similar/disimilar  type homogoeneous/heterogeneous data   allowed 
@@ -14,7 +15,7 @@ import java.util.TreeSet;
 public class SetEx {
 	public static void main(String[] args) {
 
-		TreeSet<String> al = new TreeSet<String>();// 16
+		TreeSet<String> al = new TreeSet<String>(new MyOrder());// 16   Comparable -->FI-->SAM-->compareTo-->NSO
 		al.add("suresh");
 		al.add("sandeep");
 		al.add("naresh");
@@ -26,6 +27,17 @@ public class SetEx {
 		System.out.println(al);
 
 	}
+}
+class MyOrder implements Comparator<String>//compare
+{
+
+	@Override
+	public int compare(String o1, String o2) {
+	//	return -o1.compareTo(o2);
+		return o2.compareTo(o1);
+	}
+
+
 }
 
 //ArrayList al = new ArrayList();//10,16  (cc*3/2)+1
