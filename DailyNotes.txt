@@ -1959,7 +1959,349 @@ Advantages with collections framework
 	java.util
 	
 	
+	Comparable -->compare-->java.lang-->FI -->NSO
 	
 	
 	
 	
+	
+	1.add Employee
+	2.update employee
+	3.delete employee
+	4.get employee 
+	5.get All employees
+	6.get All employees in between
+	7.get All employees by designation
+	8.exit
+	
+	
+	Layered Architecture 
+	
+				3 layers
+				
+				UI layer/cotroller layer 	Scanner /html
+	
+				service layer /business layer 	
+	
+				DAO layer/repository layer    collections
+	
+	
+	write 
+	read
+	
+	java ---->file
+	
+	java ---->database
+	
+	IO
+	
+	import java.io.File
+	
+	
+	
+	stream IO
+	
+	
+	java8 
+	
+	interfaces 
+	
+		interface---any number abstract methods -->Collection
+marker interface --->Serializable--->zero methods
+Functional Interface--->Comparable-->1 abstract SAM
+
+
+		
+		public int addOfTwo(int a,int b)
+		{
+		int result=a+b;
+		return result;
+		}
+		
+	
+	FI
+	
+	default static methods
+	
+	
+	method reference/constructor reference 
+	
+	
+				::
+	
+	
+	Stream API
+	
+	
+	flow of data 
+	
+	
+		collections/arrays-->parallel execution
+	
+	
+	
+	collection /arrays ->stream()
+						parallelStream()
+	
+	
+	
+	
+	
+	JAVA 	<----->		Database(mysql)
+	
+	emp  driver  4 
+		
+			jdbc-odbc
+			network protocol driver 
+			native api 
+			thin driver 
+	
+	
+	sun microsystem
+	
+	
+	JDBC API:java.sql
+	
+	
+	
+	5 steps
+	
+	//loading the drvier class
+	
+	//creating the connection
+	
+	//creating the statement
+	
+	//execute the query
+	
+	//close the connection
+	
+	
+	6th step 
+		
+		mysql.jar
+	
+	
+	python,mysql,angular,java
+	Day-27
+	
+	Spring Framework:
+	=================
+	
+	Framework:ready made 
+	
+	
+		spring is non-invasive framework ,which is used make/create  light weight and loosley coupled application
+	
+	
+	
+		non-invasive /invasive
+		light weight /heavy weight 
+		loosley coupled /tightly coupled 
+		
+		
+		
+		
+		
+		frameworks
+		
+			invasive 	:struts,ejb,servlet....
+			
+				it will force to the developer to implement predefined  API
+				
+			non-invasive :hibernate,spring 
+			
+				it will never force to the developer to implement predefined  API
+
+		
+		
+		implements Servlet
+		extends GenericServlet
+		extends HttpServlet		-11 methods
+		
+		class Login extends HttpServlet 
+		{
+		//11 methods
+		
+		}
+	1000*11=11000
+		
+		ejb,STRUTS
+
+		JAVA --->SPRING LIGHT WEIGHT 
+		
+		
+		ejb -->Rod Johnson
+		
+		
+		spring 1.x 2003 
+		spring 5.x
+		
+		spring 6.x 
+	
+	
+	
+	
+	loosley coupled /tightly coupled 
+	
+	
+	
+	
+	class Axx
+	{
+	 A(Strin name)
+	{
+	
+	
+	} 
+	}
+	public void m1(){
+	
+	
+	}
+	}
+	
+		
+	class B
+	{
+	
+	public void m2(){
+		A  a=new A();/tightly coupled 
+		a.m1();
+	}
+	}
+	
+	no object creation
+	
+	
+	Object life  cycle -->container /spring container 
+	
+			1)creation of object 
+			2)wiring the objects
+			3)configuring the  object
+			4)destroying the object
+			
+	
+	jars
+	
+	container:BeanFactory
+	Applicationcontext
+	
+spring 20+
+	
+	
+	spring core/IOC/DI
+	
+	
+	BeanFactory
+	
+	
+				-->configuration file -->XMl,java ,annotation
+	
+	Emp 		test
+		
+				<beans><bean><property><constructor-arg>
+	
+		setter injection		<property>
+		constructor injection	<constructor-arg>
+	
+		autowiring byname bytype constructor
+	
+	
+	@Component		@Service  @Repository
+	@Configuration
+	@ComponentScan
+	@Autowired
+	
+	
+	
+	
+	Xml--><beans><bean><property><constructor-arg>,ref,autowire,id,class....
+	
+	annotation--->@component,@service,@Repository,@COmponentScan,@Autowired,@Configuration
+	
+	NOTE:
+	=====
+	SPring has given annotations for user defined classes but not for predefined classes 
+		explicit config
+	java config --->@Bean
+	
+	
+JPA:
+====	
+	
+	
+	JDBC-->java database connectivity
+	
+	 table creation
+	query's
+	exception handling is mandatory
+	no cache support
+	
+	
+	JPA
+		no table creation
+		no querys
+		no exception handling
+		cache support
+	
+	
+	
+	JPA -->sepcification -->java persistance api--sun micro system
+	ORM-->object relational mapping-->hibernate--
+	
+		hibernate,ibatis,toplink,eclipseink...etc
+	
+			jpa
+	java <------->database
+	
+			jpa-->jdbc
+	
+	hierbnate--->jars
+	
+	
+	jpa configuration-->META-INF-->persistence.xml
+	
+	
+						database properties
+						
+							url
+							username
+							password
+							driver class
+							
+						hibernate  properties
+								
+							
+							3 properties
+							
+							
+	JDBC
+
+	JPA
+	
+	
+			persist,merge,remove,find--->1 row/record
+			
+						multiple records
+			
+			JPQL-->querys--database independent
+			
+			
+			
+			
+			1.add employee
+			2.update employee
+			3.delete employee by id
+			4.get employee by id
+			5.get all employees 
+			6.get all employees between the salaries
+			
+			
+			
+			
+			
+			
+			
+			
+							
