@@ -2184,8 +2184,8 @@ Functional Interface--->Comparable-->1 abstract SAM
 	
 	jars
 	
-	container:BeanFactory
-	Applicationcontext
+	container:BeanFactory -->LAZY intializer
+	Applicationcontext	  -->Eager Intializer
 	
 spring 20+
 	
@@ -2222,8 +2222,11 @@ spring 20+
 	
 	NOTE:
 	=====
-	SPring has given annotations for user defined classes but not for predefined classes 
-		explicit config
+	SPRING HAS GIVEN ANNOTATIONS FOR USER DEFINED CLASSES BUT NOT FOR PREDEFINED CLASSES 
+		EXPLICIT CONFIG
+		
+		
+		
 	java config --->@Bean
 	
 	
@@ -2299,9 +2302,323 @@ JPA:
 			
 			
 			
+JPA				tightly coupled 
+Spring+ JPA		loosley coupled
+			
+			
+JDBC 				tightly coupled  5 steps  checked exceptions
+Spring + JDBC 		loosley coupled	
+			
+				JdbcTemplate
 			
 			
 			
 			
 			
-							
+Spring MVC:
+============
+
+	MVC--model view controller 
+
+
+
+web application -->tomcat 
+
+		URL
+
+
+Servlet,jsp,mvc,spring mvc 
+
+
+
+Model view controller
+
+
+
+spring mvc 
+
+
+front controller -->DispatcherServlet 
+
+
+spring mvc architecture
+
+
+
+server --->		web servers 	:weblogic,glassfish,jboss,websphere....servlet container,ejb container
+			application server   :smtp,ftp,tomcat  -->servlet container 
+
+
+
+spring mvc --->tomcat-->apache -->8080
+
+
+@Controller
+			
+			URL
+@RequestMapping
+
+
+	spring core -->DI,3 types config,(beans,bean,property,constructor-arg,ref,autowire / 
+				@component,@Service,@Repository,@Configuration,@ComponentScan,@Autowired,
+				@Bean,@Controller,@RequestMapping,@ModelAttribute,@PathVariable),autowiring
+	spring jdbc 
+	spring mvc
+	spring jpa(hibernate)
+	
+	spring AOP
+	spring rest 
+	spring boot case study
+	
+	
+Webservices:
+============
+	
+	webservices is a technology which is used to share/communicate info  between two interoperable apps
+	
+	
+	-->SOCKET PROGRAMMING    soap--->XML   restfull-->xml,json,html,txt,......
+	-->RMI
+	-->EJB  
+						 java 
+					app1      app2 
+			APACHE 	 IBM			ORACLE		
+Servlet-->	Tomcat  WEBSPHERE	WEBLOGIC....	
+	
+		APACHE
+jpa--->	HIBERNATE,ECLIPSE LINK,IBATIS,TOPLINK....
+
+
+
+			webservices
+			
+			
+			SOAP    
+			
+			SIMPLE OBJECT ACCESS PROTOCOL
+			
+			REST
+			
+			REPRESENTATIONAL STATE TRANSFER 
+	
+
+Spring Boot:
+===============
+
+	NOTE:
+	=====
+	SPRING HAS GIVEN ANNOTATIONS FOR USER DEFINED CLASSES BUT NOT FOR PREDEFINED CLASSES 
+		EXPLICIT CONFIG
+	1)configuration
+	2)jars maven 
+	3)tomcat
+
+
+spring boot is built on top of spring 
+
+	1)AutoConfiguration 	@Bean(most of the commonly used classes already configured by the spring boot) 
+	2)starters
+	3)Embeded Server 		(inbuilt)tomcat
+	4)Actuators 		end point urls health config
+
+
+		STS
+
+
+
+
+
+	@GetMapping("/message") // http://localhost:8080/products/message
+	public String getMesssage() {
+		return "Few Started Sleeping";
+	}
+
+
+1)configuration 
+
+
+
+springboot  
+
+tomcat -->embeded server 
+8080
+server.port=1212
+
+
+
+Validations     name =1234
+
+
+Exceptions
+
+
+spring rest exception handling
+
+
+validations
+
+
+
+ 2 ways 
+ 
+	controller level exception handling
+@ExceptionHandler	
+	
+	application level exception handling
+
+
+@ControllerAdvice 
+	
+	
+	data jpa -->implemented repository 
+	
+	
+	ProductRepo
+	
+			CRUDRepository--->crud operations
+			PagingAndSortingReposiotry-->crud
+			JpaRepository--->
+
+spring boot h2,spring boot JWT,AOP,
+
+
+
+Security:
+===========
+
+	spring boot starter security
+
+
+	<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+
+Authentication
+
+Authorization
+
+
+	JWT-->dependencies
+	configuration
+	
+
+	JWT -->token
+	
+		Register-->
+		login-->token
+
+
+Header
+payload
+signature
+
+
+eyJhbGciOiJIUzUxMiJ9.		
+
+eyJzdWIiOiJmaXMiLCJleHAiOjE2OTk0NDMwMjIsImlhdCI6MTY5OTQyNTAyMn0.
+
+jQPweF0qZQPuaB-wL3inlMqAvOiylN4GJ_pAsGT04OYR5hfA5u14xIyxB-kPoEmlbKIf4lwkVPzhI_gSfmgLYA
+
+
+SOA
+service oriented architecture-->monolithic architecture 
+
+Microservices:
+=============
+
+		Devide/decompose/split your large project smaller services and later communicate them 
+
+
+	independently deployable
+	
+	
+	load balanceing 
+	
+
+
+			microservice1			microservice2
+
+
+					communication
+					
+							synchronous  RestTemplate
+							asynchronous  kafka,rabbitmq,activemq21
+
+UNIT TESTING,actuators
+
+H2 DATABASE:
+===========
+
+spring boot-->internal server 
+				auto configuration
+				starters
+				actuators
+				in memory DB
+
+
+web console --->h2 
+
+
+Swagger
+
+
+		<dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-bean-validators</artifactId>
+            <version>2.8.0</version>
+        </dependency>
+
+Unit Testing:
+=============
+
+unit
+
+
+
+junit 5
+
+
+		@Test
+
+
+Mockito:
+==========
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						
